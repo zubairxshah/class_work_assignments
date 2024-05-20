@@ -120,3 +120,9 @@ const a = ["Karachi", "Lahore", "Quetta", "Hyderabad"];
 const a3 = [...a].map(s => s.length);
 
 console.log("Using Arrow Function ", a3); // [7, 6, 6, 9]
+
+function average (...nums:[number,number,number]):number {
+return (nums[0]+nums[1]+nums[2])/nums.length;
+}
+
+console.log (average(5,5,5));

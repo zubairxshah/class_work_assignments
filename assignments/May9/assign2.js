@@ -81,7 +81,7 @@ function sum(a, b) {
 }
 console.log(sum(a, b));
 console.log(sum(5, 10));
-/* 3.Calculator project using function:
+/* 5.Calculator project using function:
 • Set up two variables containing number values.
 • Set up a variable to hold an operator (+ or -).
 • Create a function that takes two numbers and an operator as parameters, performs the
@@ -101,7 +101,7 @@ function calculator(x, z, y) {
 }
 console.log(calculator(x, '-', y) + ' Subtraction Answer');
 console.log(calculator(5, '+', 10) + ' Addition Answer\n');
-/* 4.Anonymous functions:
+/* 6.Anonymous functions:
 • Assign a function expression to a variable, with one parameter that outputs the provided
 argument to the console.
 • Pass an argument into the function.
