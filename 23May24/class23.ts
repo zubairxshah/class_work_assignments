@@ -56,3 +56,48 @@ let userName = 'Shah' as string;
 let num = 1 as number;
 let anyThing = 8 as number | string;
 
+let toastManager
+async function findUserCCDStake(username) {
+    try {
+        const response = await fetch('https://api.hive-engine.com/rpc/contracts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                jsonrpc: '2.0',
+                method: 'find',
+                params: {
+                    contract: 'tokens',
+                    table: 'balances',
+                    query: {
+                        symbol: 'CCD',
+                        account: username, // Search for user
+                    },
+                },
+                id: 1,
+            }),
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+            // toastManager.createToast('Error on api.hive-engine.com/rpc/contracts: ' + err, 'danger');
+        }
+
+        const userData = await response.json();
+
+        if (userData.result && userData.result.length > 0) {
+            let userCCDStake = parseFloat(userData.result[0].stake || 0);
+            
+            return userCCDStake;
+        } else {
+            return 0; // If no CCD stake found
+        }
+
+    } catch (error) {
+        toastManager.createToast('Error on api.hive-engine.com/rpc/contracts: ' + error, 'danger');
+        console.error('Error:', error.message);
+        return 0;
+    }
+}
+
+findUserCCDStake(username)

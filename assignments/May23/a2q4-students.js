@@ -14,7 +14,7 @@ o Imagine you need to update your class list! The code (not shown here) might ha
 a function that removes students who haven't completed their assignments
 (assuming only seniors are responsible).
 o Can you think of any reasons why this might be useful (consider limitations)? */
-;
+
 const classList = [
     { name: 'Shah', isSenior: false, completedAssignment: true },
     { name: 'Murtaza', isSenior: false, completedAssignment: false },
