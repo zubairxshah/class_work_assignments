@@ -53,7 +53,7 @@ for (let property in obj) {
 let firstName = ["Asim", "Ayaan", "Osama", "Ali", "Kashif"];
 let lastName = ["Khan", "Shaikh", "Abbassi", "Ahmed"];
 let fullName = [];
-for (let i = 0; i < firstName.length; i++) { //Outer loop
+for (let i = 0; i < firstName.length; i++) {
     if (lastName[i] !== undefined) {
         fullName.push(`${firstName[i]} ${lastName[i]}`);
     }
