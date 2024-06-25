@@ -50,12 +50,12 @@ async function sirZiaPromiseStatus(){ // adding async makes a function asynchron
     try{
         let status = await sirZiaPromise // waits for the response from sirZiaPromise to execute first
         console.log(status, "Try Block")
-}
-catch(error) {
-    console.error("Catch block", error)
-}
-finally {
-    console.log("Finally block")
-}
+    }
+    catch(error) {
+        console.error("Catch block", error)
+    }
+    finally {
+        console.log("Finally block")
+    }
 }
 sirZiaPromiseStatus()
