@@ -45,8 +45,7 @@ function secondResolve():Promise<string> {
         setTimeout (()=>{
             console.log('Q4: Resolving Promise 2..');
             resolve('Promise 2 resolved');
-        },3000
-    )
+        },3000)
     })
 }
 
@@ -163,7 +162,6 @@ taskRepeater();
 
 function multiply(num:number): Promise<number> {
     return new Promise((resolve)=> resolve(num*2))
-       
 }
 
 async function multiplyWithPromise(num:number): Promise<number>{
@@ -173,9 +171,7 @@ async function multiplyWithPromise(num:number): Promise<number>{
             resolve(product)
         console.log(`\nQ10: Multiplied by ${num} and result is: ${product}`)
         },8000);
-        
     })
-    
 }
 
 multiplyWithPromise(2);
