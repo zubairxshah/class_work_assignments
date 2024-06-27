@@ -35,7 +35,7 @@ additionalInfo:{
 
 console.log(tshirtDetails);
 
-type Studen2 = {
+type Student2 = {
     bio: {
         name: string,
         gender: string,
@@ -47,7 +47,7 @@ type Studen2 = {
     }
 }
 
-const studen2 : Studen2 = {
+const studen2 : Student2 = {
     bio : {
         name: 'Shah',
         gender: 'Male',
